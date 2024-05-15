@@ -12,35 +12,37 @@ public class QuestionService
         _context = context;
     }
 
-    public async Task<List<Question>> GetQuestionsAsync()
+    public List<Question> GetQuestions()
     {
-        return await _context.Questions.ToListAsync();
+        return _context.Questions.ToList();
     }
 
-    public async Task<Question> GetQuestionByIdAsync(int id)
+    public Question GetQuestionById(int id)
     {
-        return await _context.Questions.FindAsync(id);
+        return _context.Questions.FirstOrDefault(q => q.QuestionId == id);
     }
 
-    public async Task<Question> CreateQuestionAsync(Question question)
+    public Question AddQuestion(Question question)
     {
         _context.Questions.Add(question);
-        await _context.SaveChangesAsync();
+        _context.SaveChanges();
         return question;
     }
 
-    public async Task<Question> UpdateQuestionAsync(int id, Question question)
+    public Question UpdateQuestion(int id, Question question)
     {
         _context.Entry(question).State = EntityState.Modified;
-        await _context.SaveChangesAsync();
+        _context.SaveChanges();
         return question;
     }
 
-    public async Task DeleteQuestionAsync(int id)
+    public void DeleteQuestion(int id)
     {
-        var question = await _context.Questions.FindAsync(id);
-        _context.Questions.Remove(question);
-        await _context.SaveChangesAsync();
+        var question = _context.Questions.FirstOrDefault(q => q.QuestionId == id);
+        if (question != null)
+        {
+            _context.Questions.Remove(question);
+            _context.SaveChanges();
+        }
     }
-    
 }
