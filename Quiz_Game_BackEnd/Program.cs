@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Quiz_Game_BackEnd;
+using Quiz_Game_BackEnd.Models;
 using Quiz_Game_BackEnd.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -38,10 +39,12 @@ using (var scope = app.Services.CreateScope())
 
     try
     {
+        SeedData.ClearDatabase(services);
+        SeedData.Initialize(services);
     }
     catch (Exception ex)
     {
-        //Console.WriteLine(ex.Message);
+        Console.WriteLine(ex.Message);
     }
 }
 

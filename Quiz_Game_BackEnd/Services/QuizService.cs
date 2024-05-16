@@ -1,4 +1,5 @@
-﻿using Quiz_Game_BackEnd.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using Quiz_Game_BackEnd.Models;
 
 namespace Quiz_Game_BackEnd.Services;
 
@@ -13,7 +14,7 @@ public class QuizService
     
     public List<Quiz> GetAllQuizzes()
     {
-        return _context.Quizzes.ToList();
+        return _context.Quizzes.Include(q => q.Questions).ToList();
     }
     
     public Quiz GetQuizById(int id)
