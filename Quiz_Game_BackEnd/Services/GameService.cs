@@ -27,7 +27,13 @@ public class GameService
     
     public Game AddGame(Game game)
     {
-        _context.Games.Add(game);
+        var newGame = new Game
+        {
+            GameType = game.GameType,
+            PlayerId = game.PlayerId,
+            Score = game.Score,
+        };
+        _context.Games.Add(newGame);
         _context.SaveChanges();
         return game;
     }

@@ -31,7 +31,14 @@ public class QuestionService
 
     public Question UpdateQuestion(int id, Question question)
     {
-        _context.Entry(question).State = EntityState.Modified;
+        var existingQuestion = _context.Questions.FirstOrDefault(q => q.QuestionId == id);
+        if (existingQuestion != null)
+        {
+            existingQuestion.Text = question.Text;
+            existingQuestion.Answer = question.Answer;
+            existingQuestion.QuizId = question.QuizId;
+            _context.SaveChanges();
+        }
         _context.SaveChanges();
         return question;
     }

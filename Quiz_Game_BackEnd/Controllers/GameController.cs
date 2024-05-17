@@ -35,6 +35,7 @@ public class GameController:ControllerBase
     [HttpPost]
     public ActionResult<Game> AddGame(Game game)
     {
+        game.Quiz = null; // Ensure that Quiz is null
         var createdGame = _gameService.AddGame(game);
         return CreatedAtAction(nameof(GetGameById), new { id = createdGame.GameId }, createdGame);
     }

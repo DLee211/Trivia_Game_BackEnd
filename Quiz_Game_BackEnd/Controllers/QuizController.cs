@@ -34,6 +34,7 @@ public class QuizController:ControllerBase
     [HttpPost]
     public ActionResult<Quiz> AddQuiz(Quiz quiz)
     {
+        quiz.Questions = null; // Ensure that Questions is null
         var createdQuiz = _quizService.AddQuiz(quiz);
         return CreatedAtAction(nameof(GetQuizById), new { id = createdQuiz.QuizId }, createdQuiz);
     }

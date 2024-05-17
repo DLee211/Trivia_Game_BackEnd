@@ -24,6 +24,7 @@ public class QuizService
     
     public Quiz AddQuiz(Quiz quiz)
     {
+        Console.WriteLine("AddQuiz called with QuizId: " + quiz.QuizId); // Add logging
         _context.Quizzes.Add(quiz);
         _context.SaveChanges();
         return quiz;
