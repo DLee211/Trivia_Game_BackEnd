@@ -33,11 +33,11 @@ public class SeedData
             
                     var quizzes = new Quiz[]
                     {
-                        new Quiz { Level = "Easy", GameId = games[0].GameId },
-                        new Quiz { Level = "Medium", GameId = games[1].GameId },
-                        new Quiz { Level = "Hard", GameId = games[2].GameId },
-                        new Quiz { Level = "Expert", GameId = games[3].GameId },
-                        new Quiz { Level = "Master", GameId = games[4].GameId }
+                        new Quiz { Difficulty = "Easy", GameId = games[0].GameId },
+                        new Quiz { Difficulty = "Medium", GameId = games[1].GameId },
+                        new Quiz { Difficulty = "Hard", GameId = games[2].GameId },
+                        new Quiz { Difficulty = "Expert", GameId = games[3].GameId },
+                        new Quiz { Difficulty = "Master", GameId = games[4].GameId }
                     };
             
                     foreach (var quiz in quizzes)

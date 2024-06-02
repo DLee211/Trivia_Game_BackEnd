@@ -19,7 +19,7 @@ public class QuizService
     
     public Quiz GetQuizById(int id)
     {
-        return _context.Quizzes.FirstOrDefault(q => q.QuizId == id);
+        return _context.Quizzes.FirstOrDefault(q => q.GameId == id);
     }
     
     public Quiz AddQuiz(Quiz quiz)
@@ -35,7 +35,7 @@ public class QuizService
         var existingQuiz = _context.Quizzes.FirstOrDefault(q => q.QuizId == quiz.QuizId);
         if (existingQuiz != null)
         {
-            existingQuiz.Level = quiz.Level;
+            existingQuiz.Difficulty = quiz.Difficulty;
             _context.SaveChanges();
         }
         return quiz;
