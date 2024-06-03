@@ -21,7 +21,7 @@ public class QuizController:ControllerBase
     }
     
     [HttpGet("{id}")]
-    public ActionResult<Quiz> GetQuizById(int id)
+    public ActionResult<List<Quiz>>  GetQuizById(int id)
     {
         var quiz = _quizService.GetQuizById(id);
         if (quiz == null)

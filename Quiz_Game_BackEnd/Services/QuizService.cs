@@ -17,9 +17,9 @@ public class QuizService
         return _context.Quizzes.Include(q => q.Questions).ToList();
     }
     
-    public Quiz GetQuizById(int id)
+    public List<Quiz> GetQuizById(int id)
     {
-        return _context.Quizzes.FirstOrDefault(q => q.GameId == id);
+        return _context.Quizzes.Where(q => q.GameId == id).Include(q => q.Questions).ToList();
     }
     
     public Quiz AddQuiz(Quiz quiz)
