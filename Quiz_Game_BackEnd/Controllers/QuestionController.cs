@@ -22,7 +22,7 @@ public class QuestionController:ControllerBase
     }
 
     [HttpGet("{id}")]
-    public ActionResult<Question> GetQuestionById(int id)
+    public ActionResult<List<Question>> GetQuestionById(int id)
     {
         var question = _questionService.GetQuestionById(id);
         if (question == null)

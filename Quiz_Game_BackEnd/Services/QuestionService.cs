@@ -17,9 +17,9 @@ public class QuestionService
         return _context.Questions.ToList();
     }
 
-    public Question GetQuestionById(int id)
+    public List<Question> GetQuestionById(int id)
     {
-        return _context.Questions.FirstOrDefault(q => q.QuestionId == id);
+        return _context.Questions.Where(q => q.QuizId == id).ToList();
     }
 
     public Question AddQuestion(Question question)
