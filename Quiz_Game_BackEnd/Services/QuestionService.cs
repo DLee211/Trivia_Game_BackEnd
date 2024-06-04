@@ -34,7 +34,7 @@ public class QuestionService
         var existingQuestion = _context.Questions.FirstOrDefault(q => q.QuestionId == id);
         if (existingQuestion != null)
         {
-            existingQuestion.Text = question.Text;
+            existingQuestion.Problem = question.Problem;
             existingQuestion.Answer = question.Answer;
             existingQuestion.QuizId = question.QuizId;
             _context.SaveChanges();

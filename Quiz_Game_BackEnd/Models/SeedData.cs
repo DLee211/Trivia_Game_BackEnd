@@ -49,7 +49,7 @@ public class SeedData
                 for (int i = 1; i <= 10; i++)
                 {
                     var question = new Question
-                        { Text = $"Question {i}", Answer = $"Answer {i}", QuizId = quiz.QuizId };
+                        { Problem = $"Question {i}", Answer = $"Answer {i}", QuizId = quiz.QuizId };
                     _context.Questions.Add(question);
                 }
             }

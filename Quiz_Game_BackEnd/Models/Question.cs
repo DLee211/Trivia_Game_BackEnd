@@ -8,7 +8,7 @@ public class Question
     public int QuizId { get; set; }
     [Required]
     [StringLength(100, ErrorMessage = "Question cannot be longer than 100 characters.")]
-    public string Text { get; set; } 
+    public string Problem { get; set; } 
     [Required]
     [StringLength(100, ErrorMessage = "Answer cannot be longer than 100 characters.")]
     public string Answer { get; set; } 
