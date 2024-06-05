@@ -17,11 +17,11 @@ public class SeedData
 
             var games = new Game[]
             {
-                new Game { GameType = "Test Game 1", PlayerId = 1, Score = 100 },
-                new Game { GameType = "Test Game 2", PlayerId = 2, Score = 200 },
-                new Game { GameType = "Test Game 3", PlayerId = 3, Score = 300 },
-                new Game { GameType = "Test Game 4", PlayerId = 4, Score = 400 },
-                new Game { GameType = "Test Game 5", PlayerId = 5, Score = 500 }
+                new Game { GameType = "Test Game 1", Score = 100 },
+                new Game { GameType = "Test Game 2", Score = 200 },
+                new Game { GameType = "Test Game 3", Score = 300 },
+                new Game { GameType = "Test Game 4", Score = 400 },
+                new Game { GameType = "Test Game 5", Score = 500 }
             };
 
             foreach (var game in games)

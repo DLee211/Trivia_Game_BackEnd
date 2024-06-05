@@ -30,7 +30,6 @@ public class GameService
         var newGame = new Game
         {
             GameType = game.GameType,
-            PlayerId = game.PlayerId,
             Score = game.Score,
         };
         _context.Games.Add(newGame);
@@ -44,7 +43,6 @@ public class GameService
         if (existingGame != null)
         {
             existingGame.GameType = game.GameType;
-            existingGame.PlayerId = game.PlayerId;
             existingGame.Score = game.Score;
             _context.SaveChanges();
         }
