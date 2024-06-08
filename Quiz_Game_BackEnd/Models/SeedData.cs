@@ -31,7 +31,7 @@ public class SeedData
 
             _context.SaveChanges();
 
-            var difficulties = new string[] { "Easy", "Medium", "Hard", "Expert", "Master" };
+            var difficulties = new string[] { "Easy", "Medium", "Hard"};
 
             foreach (var game in games)
             {
