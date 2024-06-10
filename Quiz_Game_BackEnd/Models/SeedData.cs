@@ -46,7 +46,7 @@ public class SeedData
 
             foreach (var quiz in _context.Quizzes)
             {
-                for (int i = 1; i <= 10; i++)
+                for (int i = 1; i <= 20; i++)
                 {
                     var question = new Question
                         { Problem = $"Question {i}", Answer = $"Answer {i}", QuizId = quiz.QuizId };
