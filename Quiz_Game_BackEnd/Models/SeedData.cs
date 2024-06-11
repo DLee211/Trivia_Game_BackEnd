@@ -17,11 +17,11 @@ public class SeedData
 
             var games = new Game[]
             {
-                new Game { GameType = "Science and Technology", Score = 100 },
-                new Game { GameType = "Geography and Landmarks", Score = 200 },
-                new Game { GameType = "People and Events", Score = 300 },
-                new Game { GameType = "Sports and Recreation", Score = 400 },
-                new Game { GameType = "Arts and Culture", Score = 500 }
+                new Game { GameType = "Science and Technology", Score = 0 },
+                new Game { GameType = "Geography and Landmarks", Score = 0 },
+                new Game { GameType = "People and Events", Score = 0 },
+                new Game { GameType = "Sports and Recreation", Score = 0 },
+                new Game { GameType = "Arts and Culture", Score = 0 }
             };
 
             foreach (var game in games)
