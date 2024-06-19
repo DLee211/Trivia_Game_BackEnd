@@ -14,10 +14,7 @@ public class GameService
     
     public List<Game> GetAllGames()
     { 
-        return _context.Games
-            .Include(g => g.Quiz)
-            .ThenInclude(q => q.Questions)
-            .ToList();
+        return _context.Games.ToList();
     }
 
     public Game GetGameById(int id)

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Quiz_Game_BackEnd;
 
@@ -10,9 +11,11 @@ using Quiz_Game_BackEnd;
 namespace Quiz_Game_BackEnd.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240619142256_GameUpdate")]
+    partial class GameUpdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -103,12 +106,17 @@ namespace Quiz_Game_BackEnd.Migrations
             modelBuilder.Entity("Quiz_Game_BackEnd.Models.Quiz", b =>
                 {
                     b.HasOne("Quiz_Game_BackEnd.Models.Game", "Game")
-                        .WithMany()
+                        .WithMany("Quiz")
                         .HasForeignKey("GameId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Game");
+                });
+
+            modelBuilder.Entity("Quiz_Game_BackEnd.Models.Game", b =>
+                {
+                    b.Navigation("Quiz");
                 });
 
             modelBuilder.Entity("Quiz_Game_BackEnd.Models.Quiz", b =>

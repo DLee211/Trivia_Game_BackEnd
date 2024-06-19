@@ -8,6 +8,7 @@ public class Quiz
     [Required]
     [StringLength(100, ErrorMessage = "Level Name cannot be longer than 100 characters.")]
     public string Difficulty { get; set; }
+    public Game Game { get; set; }
     public int GameId { get; set; }
     public List<Question> Questions { get; set; }
 }

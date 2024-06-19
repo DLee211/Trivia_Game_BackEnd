@@ -10,5 +10,4 @@ public class Game
     public string GameType { get; set; } 
     [Required]
     public int Score { get; set; }
-    public List<Quiz> Quiz { get; set; }
 }

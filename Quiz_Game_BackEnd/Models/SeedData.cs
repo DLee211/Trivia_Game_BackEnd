@@ -50,7 +50,7 @@ public class SeedData
                 {
                     var question = new Question
                     {
-                        Problem = $"Question {i} for {quiz.Difficulty} difficulty",
+                        Problem = $"{quiz.Game.GameType} - {quiz.Difficulty} difficulty - Question {i}",
                         Answer = $"Answer {i}",
                         QuizId = quiz.QuizId
                     };
