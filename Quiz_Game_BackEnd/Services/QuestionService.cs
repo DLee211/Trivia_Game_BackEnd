@@ -52,4 +52,10 @@ public class QuestionService
             _context.SaveChanges();
         }
     }
+    
+    public int GetGameIdByQuestionId(int questionId)
+    {
+        var question = _context.Questions.Include(q => q.Quiz).FirstOrDefault(q => q.QuestionId == questionId);
+        return question.Quiz.GameId;
+    }
 }

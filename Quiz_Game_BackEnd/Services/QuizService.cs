@@ -14,12 +14,12 @@ public class QuizService
     
     public List<Quiz> GetAllQuizzes()
     {
-        return _context.Quizzes.Include(q => q.Questions).ToList();
+        return _context.Quizzes.ToList();
     }
     
     public List<Quiz> GetQuizById(int id)
     {
-        return _context.Quizzes.Where(q => q.GameId == id).Include(q => q.Questions).ToList();
+        return _context.Quizzes.Where(q => q.GameId == id).ToList();
     }
     
     public Quiz AddQuiz(Quiz quiz)
