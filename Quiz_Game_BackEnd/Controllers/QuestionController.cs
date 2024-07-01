@@ -32,6 +32,17 @@ public class QuestionController:ControllerBase
         return question;
     }
     
+    [HttpGet("{questionId}/gameId")]
+    public ActionResult<int?> GetGameIdByQuestionId(int questionId)
+    {
+        var gameId = _questionService.GetGameIdByQuestionId(questionId);
+        if (gameId == null)
+        {
+            return NotFound();
+        }
+        return gameId;
+    }
+    
     [HttpPost]
     public ActionResult<Question> AddQuestion(Question question)
     {
