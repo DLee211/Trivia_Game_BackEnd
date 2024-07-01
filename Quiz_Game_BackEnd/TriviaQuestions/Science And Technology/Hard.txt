@@ -1,0 +1,92 @@
+What is the name of the first artificial Earth satellite, launched by the Soviet Union in 1957?|Sputnik 1
+What is the chemical formula for glucose?|C6H12O6
+Who is known for the uncertainty principle in quantum mechanics?|Werner Heisenberg
+What is the term for the amount of disorder or randomness in a system?|Entropy
+What element has the atomic number 92?|Uranium
+What is the process of splitting an atomic nucleus called?|Nuclear fission
+Who developed the first successful polio vaccine in 1952?|Jonas Salk
+What is the most common isotope of carbon?|Carbon-12
+What is the name of the boundary around a black hole beyond which nothing can escape?|Event horizon
+What is the main cause of the greenhouse effect?|Carbon dioxide
+What is the unit of measure for inductance?|Henry
+Who proposed the heliocentric model of the solar system?|Nicolaus Copernicus
+What is the study of the motion of fluids called?|Fluid dynamics
+What is the term for the ability of a material to conduct electric current?|Electrical conductivity
+What is the most abundant element in the Earth's crust?|Oxygen
+What is the chemical symbol for the element tungsten?|W
+What is the principle that states that energy cannot be created or destroyed?|Conservation of energy
+What is the name of the device used to measure atmospheric pressure?|Barometer
+What type of electromagnetic radiation has the shortest wavelength?|Gamma rays
+What is the study of the properties and behavior of atomic nuclei called?|Nuclear physics
+What is the main ingredient in traditional gunpowder?|Saltpeter (potassium nitrate)
+What is the name of the effect that causes the frequency of a wave to change as the source and observer move relative to each other?|Doppler effect
+What is the unit of measure for magnetic flux?|Weber
+Who discovered the electron in 1897?|J.J. Thomson
+What is the term for the resistance of a fluid to flow?|Viscosity
+What is the chemical symbol for the element cadmium?|Cd
+What is the name of the process by which a liquid changes into a gas?|Evaporation
+What is the term for a solution that can resist changes in pH when an acid or base is added?|Buffer
+What is the second most abundant element in the Earth's crust?|Silicon
+What is the chemical formula for sulfuric acid?|H2SO4
+What is the name of the phase transition from gas to liquid?|Condensation
+What is the most common isotope of hydrogen?|Protium
+What is the study of the interaction between light and matter called?|Spectroscopy
+What is the unit of measure for electric charge?|Coulomb
+What is the chemical symbol for the element platinum?|Pt
+What is the name of the principle that states that the total energy of an isolated system is constant?|Conservation of energy
+What is the term for a material that has no electrical resistance?|Superconductor
+What is the name of the largest moon of Saturn?|Titan
+What is the term for the study of the structure and function of biological macromolecules?|Molecular biology
+What is the name of the effect that describes the behavior of particles at very low temperatures?|Bose-Einstein condensation
+What is the unit of measure for luminous intensity?|Candela
+What is the name of the law that states that the pressure of a gas is inversely proportional to its volume?|Boyle's law
+What is the term for the heat required to change the phase of a substance without changing its temperature?|Latent heat
+What is the chemical formula for methane?|CH4
+What is the term for the tendency of an object to resist changes in its state of motion?|Inertia
+What is the name of the process by which plants convert sunlight into chemical energy?|Photosynthesis
+What is the term for the energy required to remove an electron from an atom or molecule?|Ionization energy
+What is the chemical symbol for the element radium?|Ra
+What is the name of the process by which a solid changes directly into a gas?|Sublimation
+What is the term for the lowest energy state of an atom or molecule?|Ground state
+What is the chemical formula for hydrochloric acid?|HCl
+What is the term for the number of protons in the nucleus of an atom?|Atomic number
+What is the unit of measure for radioactivity?|Becquerel
+What is the name of the scientist who discovered the neutron in 1932?|James Chadwick
+What is the term for the rate of change of velocity?|Acceleration
+What is the chemical symbol for the element xenon?|Xe
+What is the name of the process by which a gas changes into a solid?|Deposition
+What is the term for a material that allows electrons to flow easily through it?|Conductor
+What is the name of the device used to measure electric current?|Ammeter
+What is the term for the study of the properties and behavior of light?|Optics
+What is the chemical formula for ammonia?|NH3
+What is the name of the principle that states that a change in pressure at any point in an incompressible fluid is transmitted equally throughout the fluid?|Pascal's principle
+What is the term for the distance between successive crests of a wave?|Wavelength
+What is the chemical formula for calcium carbonate?|CaCO3
+What is the term for the energy stored in an object due to its position?|Potential energy
+What is the name of the process by which a liquid changes into a solid?|Freezing
+What is the chemical formula for nitric acid?|HNO3
+What is the term for the capacity of a material to absorb energy when it is deformed elastically?|Elastic modulus
+What is the name of the scientist who proposed the three laws of motion?|Isaac Newton
+What is the chemical formula for acetic acid?|CH3COOH
+What is the term for the tendency of a material to return to its original shape after being deformed?|Elasticity
+What is the name of the process by which a solid changes into a liquid?|Melting
+What is the chemical formula for sodium chloride?|NaCl
+What is the term for the amount of space an object occupies?|Volume
+What is the name of the process by which a liquid changes into a gas?|Vaporization
+What is the chemical formula for carbon dioxide?|CO2
+What is the term for the amount of matter in an object?|Mass
+What is the name of the process by which a gas changes into a liquid?|Condensation
+What is the chemical formula for sulfur dioxide?|SO2
+What is the term for the energy of an object due to its motion?|Kinetic energy
+What is the name of the scientist who discovered the law of universal gravitation?|Isaac Newton
+What is the chemical formula for phosphoric acid?|H3PO4
+What is the term for the energy required to break a chemical bond?|Bond energy
+What is the name of the process by which a liquid changes into a solid?|Solidification
+What is the chemical formula for potassium hydroxide?|KOH
+What is the term for the study of the behavior of materials under load?|Mechanics of materials
+What is the name of the scientist who developed the periodic table?|Dmitri Mendeleev
+What is the chemical formula for aluminum oxide?|Al2O3
+What is the term for the study of the properties and behavior of atomic nuclei?|Nuclear physics
+What is the name of the process by which a solid changes directly into a gas?|Sublimation
+What is the chemical formula for magnesium sulfate?|MgSO4
+What is the term for the energy required to remove an electron from an atom or molecule?|Ionization energy
