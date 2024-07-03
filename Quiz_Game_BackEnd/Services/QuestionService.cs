@@ -16,8 +16,13 @@ public class QuestionService
     {
         return _context.Questions.ToList();
     }
+    
+    public Question GetQuestionById(int id)
+    {
+        return _context.Questions.Include(q => q.Quiz).FirstOrDefault(q => q.QuestionId == id);
+    }
 
-    public List<Question> GetQuestionById(int id)
+    public List<Question> GetQuestionByQuizId(int id)
     {
         return _context.Questions.Where(q => q.QuizId == id).ToList();
     }
@@ -55,7 +60,7 @@ public class QuestionService
     
     public int GetGameIdByQuestionId(int questionId)
     {
-        var question = _context.Questions.Include(q => q.Quiz).FirstOrDefault(q => q.QuestionId == questionId);
+        var question = GetQuestionById(questionId);
         return question.Quiz.GameId;
     }
 }

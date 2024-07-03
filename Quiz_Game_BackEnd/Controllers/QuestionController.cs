@@ -24,7 +24,7 @@ public class QuestionController:ControllerBase
     [HttpGet("{id}")]
     public ActionResult<List<Question>> GetQuestionById(int id)
     {
-        var question = _questionService.GetQuestionById(id);
+        var question = _questionService.GetQuestionByQuizId(id);
         if (question == null)
         {
             return NotFound();
@@ -54,7 +54,7 @@ public class QuestionController:ControllerBase
     public ActionResult UpdateQuestion(int id, Question question)
     {
         question.QuestionId = id;
-        var existingQuestion = _questionService.GetQuestionById(id);
+        var existingQuestion = _questionService.GetQuestionByQuizId(id);
         if (existingQuestion == null)
         {
             return BadRequest();
