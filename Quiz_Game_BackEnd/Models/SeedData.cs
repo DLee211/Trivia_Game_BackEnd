@@ -11,7 +11,7 @@ public class SeedData
     {
         if (_context.Games.Any())
         {
-            return; // DB has been seeded
+            return;
         }
 
         var games = new Game[]
@@ -43,7 +43,7 @@ public class SeedData
             }
         }
 
-        _context.SaveChanges(); // Ensure the Quizzes are saved and IDs are generated
+        _context.SaveChanges();
 
         var questions = new List<Question>();
         foreach (var quiz in quizzes)
