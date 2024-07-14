@@ -13,7 +13,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddScoped<GameService>();
 builder.Services.AddScoped<QuizService>();
 builder.Services.AddScoped<QuestionService>();
-builder.Services.AddControllers(); 
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Quiz_Game_BackEnd.Models;
 
 namespace Quiz_Game_BackEnd.Services;
@@ -17,9 +18,24 @@ public class QuizService
         return _context.Quizzes.ToList();
     }
     
-    public List<Quiz> GetQuizById(int id)
+    public List<QuizDTO> GetQuizzesByGameId(int gameId)
     {
-        return _context.Quizzes.Where(q => q.GameId == id).ToList();
+        var quizzes = _context.Quizzes
+            .Include(q => q.Questions) // Ensure Questions are eagerly loaded
+            .Where(q => q.GameId == gameId)
+            .Select(q => new QuizDTO
+            {
+                QuizId = q.QuizId,
+                Difficulty = q.Difficulty,
+                GameId = q.GameId,
+                Questions = q.Questions.Select(question => new QuestionDTO
+                {
+                    QuestionId = question.QuestionId,
+                    Problem = question.Problem,
+                    Answer = question.Answer
+                }).ToList()
+            }).ToList();
+        return quizzes;
     }
     
     public Quiz AddQuiz(Quiz quiz)
@@ -49,5 +65,14 @@ public class QuizService
             _context.Quizzes.Remove(quiz);
             _context.SaveChanges();
         }
+    }
+
+    public ActionResult<Quiz> GetQuizById(int id)
+    {
+        var quiz = _context.Quizzes
+            .Include(q => q.Questions)
+            .FirstOrDefault(q => q.QuizId == id);
+
+        return quiz;
     }
 }

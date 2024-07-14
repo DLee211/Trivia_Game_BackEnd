@@ -21,7 +21,7 @@ public class QuizController:ControllerBase
     }
     
     [HttpGet("{id}")]
-    public ActionResult<List<Quiz>>  GetQuizById(int id)
+    public ActionResult<Quiz> GetQuizById(int id)
     {
         var quiz = _quizService.GetQuizById(id);
         if (quiz == null)
@@ -29,6 +29,17 @@ public class QuizController:ControllerBase
             return NotFound();
         }
         return quiz;
+    }
+    
+    [HttpGet($"game/{{gameId}}")]
+    public ActionResult<List<QuizDTO>> GetQuizzesByGameId(int gameId)
+    {
+        var quizzes = _quizService.GetQuizzesByGameId(gameId);
+        if (quizzes == null || !quizzes.Any())
+        {
+            return NotFound();
+        }
+        return quizzes;
     }
     
     [HttpPost]

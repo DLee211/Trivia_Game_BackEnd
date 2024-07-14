@@ -12,4 +12,6 @@ public class Quiz
 
     public Game Game { get; set; }
     public int GameId { get; set; }
+    public virtual ICollection<Question> Questions { get; set; }
+
 }
