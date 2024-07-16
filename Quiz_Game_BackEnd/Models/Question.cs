@@ -10,5 +10,5 @@ public class Question
     [Required]
     public string Problem { get; set; } 
     [Required]
-    public string Answer { get; set; } 
+    public string Answer { get; set; }
 }
