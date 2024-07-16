@@ -27,20 +27,17 @@ public class QuestionService
         return _context.Questions.Where(q => q.QuizId == id).ToList();
     }
 
-    public Question AddQuestion(QuestionAddDto questionDto)
+    public QuestionAddDto AddQuestion(QuestionAddDto questionDto)
     {
-        // Find the quiz with the given gameId and difficulty, or create a new one if it doesn't exist
         var quiz = _context.Quizzes.FirstOrDefault(q => q.GameId == questionDto.GameId && q.Difficulty.ToLower() == questionDto.Difficulty.ToLower())
                    ?? new Quiz { GameId = questionDto.GameId, Difficulty = questionDto.Difficulty };
     
-        // If the quiz is new, add it to the context
         if (quiz.QuizId == 0)
         {
             _context.Quizzes.Add(quiz);
             _context.SaveChanges(); // Save changes to get the QuizId for the new quiz
         }
 
-        // Create a new question object from the DTO and associate it with the quiz
         var question = new Question
         {
             Problem = questionDto.Problem,
@@ -50,8 +47,7 @@ public class QuestionService
         
         _context.Questions.Add(question);
         _context.SaveChanges();
-
-        return question;
+        return questionDto;
     }
     
     public Quiz GetQuizByGameIdAndDifficulty(int gameId, string difficulty)

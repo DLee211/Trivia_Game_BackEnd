@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 using Quiz_Game_BackEnd;
 using Quiz_Game_BackEnd.Models;

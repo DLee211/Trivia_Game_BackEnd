@@ -44,26 +44,10 @@ public class QuestionController:ControllerBase
     }
     
     [HttpPost]
-    public ActionResult<Question> AddQuestion([FromBody] QuestionAddDto questionDto)
-    {
-        // Find the quiz with the given gameId and difficulty, or create a new one if it doesn't exist
-        var quiz = _questionService.GetQuizByGameIdAndDifficulty(questionDto.GameId, questionDto.Difficulty) 
-                   ?? _questionService.CreateQuiz(questionDto.GameId, questionDto.Difficulty);
-
-        // Create a new question object from the DTO
-        var question = new QuestionAddDto()
-        {
-            GameId = questionDto.GameId,
-            Difficulty = questionDto.Difficulty,
-            Problem = questionDto.Problem,
-            Answer = questionDto.Answer,
-        };
-
-        // Add the new question
-        var createdQuestion = _questionService.AddQuestion(question);
-
-        // Return the created question
-        return CreatedAtAction(nameof(GetQuestionById), new { id = createdQuestion.QuestionId }, createdQuestion);
+    public ActionResult<QuestionAddDto> AddQuestion([FromBody] QuestionAddDto questionDto)
+    { 
+        _questionService.AddQuestion(questionDto);
+        return NoContent();
     }
     
     [HttpPut("{id}")]
