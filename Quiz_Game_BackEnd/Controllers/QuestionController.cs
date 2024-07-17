@@ -51,15 +51,14 @@ public class QuestionController:ControllerBase
     }
     
     [HttpPut("{id}")]
-    public ActionResult UpdateQuestion(int id, Question question)
+    public ActionResult UpdateQuestion(int id, [FromBody] QuestionAddDto questionDto)
     {
-        question.QuestionId = id;
-        var existingQuestion = _questionService.GetQuestionByQuizId(id);
+        var existingQuestion = _questionService.GetQuestionById(id);
         if (existingQuestion == null)
         {
-            return BadRequest();
+            return NotFound();
         }
-        _questionService.UpdateQuestion(id, question);
+        _questionService.UpdateQuestion(id, questionDto);
         return NoContent();
     }
     

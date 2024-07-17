@@ -63,18 +63,31 @@ public class QuestionService
         return quiz;
     }
 
-    public Question UpdateQuestion(int id, Question question)
+    public QuestionAddDto UpdateQuestion(int id, QuestionAddDto questionDto)
     {
         var existingQuestion = _context.Questions.FirstOrDefault(q => q.QuestionId == id);
         if (existingQuestion != null)
         {
-            existingQuestion.Problem = question.Problem;
-            existingQuestion.Answer = question.Answer;
-            existingQuestion.QuizId = question.QuizId;
+            existingQuestion.Problem = questionDto.Problem;
+            existingQuestion.Answer = questionDto.Answer;
+            
+            // Check if a Quiz with the new difficulty already exists
+            var quiz = _context.Quizzes.FirstOrDefault(q => q.GameId == existingQuestion.Quiz.GameId && q.Difficulty.ToLower() == questionDto.Difficulty.ToLower());
+
+            if (quiz == null)
+            {
+                // If not, create a new Quiz with the new difficulty
+                quiz = new Quiz { GameId = existingQuestion.Quiz.GameId, Difficulty = questionDto.Difficulty };
+                _context.Quizzes.Add(quiz);
+                _context.SaveChanges();
+            }
+
+            // Update the question's QuizId to the correct Quiz
+            existingQuestion.QuizId = quiz.QuizId;
+
             _context.SaveChanges();
         }
-        _context.SaveChanges();
-        return question;
+        return questionDto;
     }
 
     public void DeleteQuestion(int id)
