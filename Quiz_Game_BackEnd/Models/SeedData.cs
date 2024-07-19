@@ -16,7 +16,7 @@ public class SeedData
 
         var games = new Game[]
         {
-            new Game { GameType = "Science and Technology", Score = 3 },
+            new Game { GameType = "Science and Technology", Score = 0 },
             new Game { GameType = "Geography and Landmarks", Score = 0 },
             new Game { GameType = "People and Events", Score = 0 },
             new Game { GameType = "Sports and Recreation", Score = 0 },

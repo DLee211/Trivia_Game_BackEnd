@@ -100,9 +100,14 @@ public class QuestionService
         }
     }
     
-    public int GetGameIdByQuestionId(int questionId)
+    public int? GetGameIdByQuestionId(int questionId)
     {
         var question = GetQuestionById(questionId);
+        if (question == null)
+        {
+            // Return null or a default value indicating that the question was not found
+            return null;
+        }
         return question.Quiz.GameId;
     }
 }
