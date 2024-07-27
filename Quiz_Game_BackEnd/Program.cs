@@ -40,7 +40,6 @@ using (var scope = app.Services.CreateScope())
 
     try
     {
-        SeedData.ClearDatabase(services);
         SeedData.Initialize(services);
     }
     catch (Exception ex)
