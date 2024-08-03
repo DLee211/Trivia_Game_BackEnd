@@ -1,5 +1,5 @@
 # Trivia Management System
-This project is a Trivia Management System Web API built with C# and Entity Framework. It allows users to manage quizzes and questions, including creating, updating, and associating questions with quizzes based on difficulty levels.  
+This project is a Trivia Management System Web API built with C# and Entity Framework. It allows users to manage quizzes and questions, including creating, updating, and associating questions with quizzes based on difficulty levels. This application is the backend for this [application](https://github.com/DLee211/Trivia-Game-FrontEnd)  
 
 ## Features
 
